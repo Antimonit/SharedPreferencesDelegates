@@ -18,4 +18,5 @@ rootProject.name = "SharedPreferencesDelegates"
 include(
     ":core",
     ":moshi",
+    ":serialization",
 )
