@@ -170,4 +170,23 @@ class SharedPreferencesMoshiDelegatesTest {
         dateObject = customDateObject
         expectThat(dateObject).isEqualTo(customDateObject)
     }
+
+//    @Ignore
+//    @Test
+//    fun `changing typed object delegate returns default value`() {
+//        // TODO: change default behavior
+//        var typed: Typed? by preferences.relaxedTypedObject("relaxedTyped", null)
+//
+//        val customNested = Nested(text = "custom", number = 42)
+//
+//        var nested: Nested
+//            by preferences.relaxedTypedObject("relaxedTyped", customNested)
+//
+//        typed = customTyped
+//
+//        expectThat(nested).isEqualTo(customNested)
+//        nested = customNested
+//        expectThat(nested).isEqualTo(customNested)
+//        expectThat(typed).isEqualTo(null)
+//    }
 }
