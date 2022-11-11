@@ -17,4 +17,5 @@ dependencyResolutionManagement {
 rootProject.name = "SharedPreferencesDelegates"
 include(
     ":core",
+    ":moshi",
 )
