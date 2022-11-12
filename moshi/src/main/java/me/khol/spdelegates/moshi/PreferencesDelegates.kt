@@ -1,15 +1,13 @@
 package me.khol.spdelegates.moshi
 
-import android.content.SharedPreferences
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.Moshi
+import me.khol.spdelegates.common.Editor
+import me.khol.spdelegates.common.Preferences
 import me.khol.spdelegates.common.edit
 import java.lang.reflect.Type
 import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
-
-private typealias Preferences = SharedPreferences
-private typealias Editor = SharedPreferences.Editor
 
 @PublishedApi
 internal val defaultMoshi = Moshi.Builder().build()
