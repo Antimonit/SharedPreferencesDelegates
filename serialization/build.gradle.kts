@@ -10,10 +10,10 @@ android {
 dependencies {
     api(project(":core"))
 
-    api("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1")
+    api(libs.kotlinx.serialization)
 
-    testImplementation("junit:junit:4.13.2")
-    testImplementation("io.strikt:strikt-core:0.34.1")
-    testImplementation("org.robolectric:robolectric:4.9")
-    testImplementation("androidx.test.ext:junit:1.1.4")
+    testImplementation(libs.junit)
+    testImplementation(libs.strikt)
+    testImplementation(libs.robolectric)
+    testImplementation(libs.androidx.test.junit)
 }

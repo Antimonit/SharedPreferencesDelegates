@@ -3,7 +3,7 @@ plugins {
 }
 
 dependencies {
-    implementation("com.android.tools.build:gradle:7.3.0")
-    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.10")
-    implementation("org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:3.3")
+    implementation(libs.plugin.android)
+    implementation(libs.plugin.kotlin)
+    implementation(libs.plugin.kotlin.serialization)
 }

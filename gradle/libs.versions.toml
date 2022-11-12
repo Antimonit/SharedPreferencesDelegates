@@ -1,0 +1,19 @@
+[versions]
+kotlin = "1.7.10"
+moshi = "1.14.0"
+
+[libraries]
+junit = { module = "junit:junit", version = "4.13.2" }
+strikt = { module = "io.strikt:strikt-core", version = "0.34.1" }
+robolectric = { module = "org.robolectric:robolectric", version = "4.9" }
+androidx-test-junit = { module = "androidx.test.ext:junit", version = "1.1.4" }
+
+moshi = { module = "com.squareup.moshi:moshi", version.ref = "moshi" }
+moshi-codegen = { module = "com.squareup.moshi:moshi-kotlin-codegen", version.ref = "moshi" }
+
+kotlinx-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version = "1.4.1" }
+
+plugin-android = { module = "com.android.tools.build:gradle", version = "7.3.0" }
+plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+plugin-kotlin-serialization = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
+plugin-maven-publish = { module = "com.vanniktech:gradle-maven-publish-plugin", version = "0.22.0" }
