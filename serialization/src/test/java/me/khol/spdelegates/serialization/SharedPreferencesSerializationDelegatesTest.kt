@@ -15,7 +15,7 @@ import kotlinx.serialization.descriptors.PrimitiveSerialDescriptor
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import me.khol.spdelegates.edit
+import me.khol.spdelegates.common.edit
 import me.khol.spdelegates.int
 import me.khol.spdelegates.string
 import org.junit.After

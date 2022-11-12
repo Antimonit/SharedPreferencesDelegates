@@ -9,6 +9,7 @@ android {
 
 dependencies {
     api(project(":core"))
+    implementation(project(":common"))
 
     api(libs.moshi)
     kaptTest(libs.moshi.codegen)

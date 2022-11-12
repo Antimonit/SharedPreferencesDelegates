@@ -12,7 +12,7 @@ import com.squareup.moshi.JsonDataException
 import com.squareup.moshi.JsonReader
 import com.squareup.moshi.JsonWriter
 import com.squareup.moshi.Types
-import me.khol.spdelegates.edit
+import me.khol.spdelegates.common.edit
 import me.khol.spdelegates.int
 import me.khol.spdelegates.string
 import org.junit.After

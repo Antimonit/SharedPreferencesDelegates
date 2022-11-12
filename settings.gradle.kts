@@ -18,6 +18,7 @@ dependencyResolutionManagement {
 rootProject.name = "SharedPreferencesDelegates"
 include(
     ":core",
+    ":common",
     ":moshi",
     ":serialization",
 )

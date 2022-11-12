@@ -1,6 +1,7 @@
 package me.khol.spdelegates
 
 import android.content.SharedPreferences
+import me.khol.spdelegates.common.edit
 import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
 

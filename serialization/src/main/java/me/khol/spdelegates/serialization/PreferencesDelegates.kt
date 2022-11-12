@@ -4,7 +4,7 @@ import android.content.SharedPreferences
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.serializer
-import me.khol.spdelegates.edit
+import me.khol.spdelegates.common.edit
 import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
 

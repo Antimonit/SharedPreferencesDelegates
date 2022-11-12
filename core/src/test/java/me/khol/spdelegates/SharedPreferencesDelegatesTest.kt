@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
+import me.khol.spdelegates.common.edit
 import org.junit.After
 import org.junit.Before
 import org.junit.Test
