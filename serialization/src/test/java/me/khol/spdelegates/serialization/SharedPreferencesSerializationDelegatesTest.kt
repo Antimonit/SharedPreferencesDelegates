@@ -6,15 +6,8 @@ import android.content.Context
 import android.content.SharedPreferences
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import kotlinx.serialization.KSerializer
-import kotlinx.serialization.Serializable
 import kotlinx.serialization.SerializationException
 import kotlinx.serialization.builtins.nullable
-import kotlinx.serialization.descriptors.PrimitiveKind
-import kotlinx.serialization.descriptors.PrimitiveSerialDescriptor
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
 import me.khol.spdelegates.common.edit
 import me.khol.spdelegates.int
 import me.khol.spdelegates.string
@@ -177,41 +170,4 @@ class SharedPreferencesMoshiDelegatesTest {
         dateObject = customDateObject
         expectThat(dateObject).isEqualTo(customDateObject)
     }
-
-    companion object {
-        private val customNested = Nested(
-            text = "text",
-            number = 1,
-        )
-        private val customTyped = Typed(
-            map = mapOf("key" to "value"),
-            nested = customNested
-        )
-        private val customGeneric = Generic(
-            customTyped
-        )
-    }
-}
-
-@Serializable
-internal data class Typed(
-    val map: Map<String, String>,
-    val nested: Nested,
-)
-
-@Serializable
-internal data class Nested(
-    val text: String,
-    val number: Int,
-)
-
-@Serializable
-internal data class Generic<out T>(
-    val typed: T,
-)
-
-object DateAsLongSerializer : KSerializer<Date> {
-    override val descriptor: SerialDescriptor = PrimitiveSerialDescriptor("Date", PrimitiveKind.LONG)
-    override fun serialize(encoder: Encoder, value: Date) = encoder.encodeLong(value.time)
-    override fun deserialize(decoder: Decoder): Date = Date(decoder.decodeLong())
 }

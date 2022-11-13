@@ -17,4 +17,6 @@ dependencies {
     testImplementation(libs.strikt)
     testImplementation(libs.robolectric)
     testImplementation(libs.androidx.test.junit)
+    testImplementation(libs.mockk.android)
+    testImplementation(libs.mockk.agent)
 }

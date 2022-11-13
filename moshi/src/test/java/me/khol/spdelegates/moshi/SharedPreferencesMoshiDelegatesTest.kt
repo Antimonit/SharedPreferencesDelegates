@@ -7,10 +7,7 @@ import android.content.SharedPreferences
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import com.squareup.moshi.JsonAdapter
-import com.squareup.moshi.JsonClass
 import com.squareup.moshi.JsonDataException
-import com.squareup.moshi.JsonReader
-import com.squareup.moshi.JsonWriter
 import com.squareup.moshi.Types
 import me.khol.spdelegates.common.edit
 import me.khol.spdelegates.int
@@ -176,40 +173,4 @@ class SharedPreferencesMoshiDelegatesTest {
         dateObject = customDateObject
         expectThat(dateObject).isEqualTo(customDateObject)
     }
-
-    companion object {
-        private val customNested = Nested(
-            text = "text",
-            number = 1,
-        )
-        private val customTyped = Typed(
-            map = mapOf("key" to "value"),
-            nested = customNested
-        )
-        private val customGeneric = Generic(
-            customTyped
-        )
-    }
-}
-
-@JsonClass(generateAdapter = true)
-internal data class Typed(
-    val map: Map<String, String>,
-    val nested: Nested,
-)
-
-@JsonClass(generateAdapter = true)
-internal data class Nested(
-    val text: String,
-    val number: Int,
-)
-
-@JsonClass(generateAdapter = true)
-internal data class Generic<out T>(
-    val typed: T,
-)
-
-class DateJsonAdapter : JsonAdapter<Date>() {
-    override fun fromJson(reader: JsonReader): Date { return Date(reader.nextLong()) }
-    override fun toJson(writer: JsonWriter, value: Date?) { writer.value(value!!.time) }
 }
