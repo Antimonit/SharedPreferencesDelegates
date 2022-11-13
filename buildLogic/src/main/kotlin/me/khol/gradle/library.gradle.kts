@@ -4,6 +4,7 @@ plugins {
     id("com.android.library")
     kotlin("android")
     id("maven-publish")
+    id("me.khol.gradle.jacoco.android")
 }
 
 val publicationRelease = "release"
