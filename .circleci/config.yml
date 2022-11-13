@@ -1,5 +1,8 @@
 version: 2.1
 
+orbs:
+  codecov: codecov/codecov@3.2.2
+
 jobs:
   build:
     docker:
@@ -10,7 +13,16 @@ jobs:
       TERM: dumb
     steps:
       - checkout
-      - run: gradle check
+      - run: ./gradlew check
+      - run: ./gradlew :core:testDebugUnitTestCoverage
+      - run: ./gradlew :moshi:testDebugUnitTestCoverage
+      - run: ./gradlew :serialization:testDebugUnitTestCoverage
+      - codecov/upload:
+          file: core/build/reports/jacoco/testDebugUnitTestCoverage/testDebugUnitTestCoverage.xml
+      - codecov/upload:
+          file: moshi/build/reports/jacoco/testDebugUnitTestCoverage/testDebugUnitTestCoverage.xml
+      - codecov/upload:
+          file: serialization/build/reports/jacoco/testDebugUnitTestCoverage/testDebugUnitTestCoverage.xml
 
 workflows:
   test:
