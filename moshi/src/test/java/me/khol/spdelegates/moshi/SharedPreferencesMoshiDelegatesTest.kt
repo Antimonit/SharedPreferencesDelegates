@@ -1,4 +1,4 @@
-@file:Suppress("KotlinConstantConditions")
+@file:Suppress("KotlinConstantConditions", "IllegalIdentifier")
 
 package me.khol.spdelegates.moshi
 
@@ -159,6 +159,7 @@ class SharedPreferencesMoshiDelegatesTest {
         expectThat(nested).isEqualTo(customNested)
     }
 
+    @Suppress("UNUSED_VALUE", "ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
     @Test
     fun `serializing a non-primitive type without a proper adapter throws`() {
         expectCatching<Any?> {
