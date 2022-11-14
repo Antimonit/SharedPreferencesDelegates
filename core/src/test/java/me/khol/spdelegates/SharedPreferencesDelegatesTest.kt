@@ -1,4 +1,4 @@
-@file:Suppress("KotlinConstantConditions")
+@file:Suppress("KotlinConstantConditions", "IllegalIdentifier")
 
 package me.khol.spdelegates
 
