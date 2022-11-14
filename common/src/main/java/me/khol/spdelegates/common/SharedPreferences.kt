@@ -3,9 +3,6 @@ package me.khol.spdelegates.common
 import android.annotation.SuppressLint
 import android.content.SharedPreferences
 
-typealias Preferences = SharedPreferences
-typealias Editor = SharedPreferences.Editor
-
 // Copied from `androidx.core:core-ktx` library to avoid pulling in a 3rd-party library
 // that might potentially cause version resolution conflicts on client side
 

@@ -1,10 +1,12 @@
 package me.khol.spdelegates
 
-import me.khol.spdelegates.common.Editor
-import me.khol.spdelegates.common.Preferences
+import android.content.SharedPreferences
 import me.khol.spdelegates.common.edit
 import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
+
+private typealias Preferences = SharedPreferences
+private typealias Editor = SharedPreferences.Editor
 
 private const val defaultCommit = false
 

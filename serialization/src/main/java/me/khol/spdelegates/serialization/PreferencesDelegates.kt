@@ -1,13 +1,15 @@
 package me.khol.spdelegates.serialization
 
+import android.content.SharedPreferences
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.serializer
-import me.khol.spdelegates.common.Editor
-import me.khol.spdelegates.common.Preferences
 import me.khol.spdelegates.common.edit
 import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
+
+private typealias Preferences = SharedPreferences
+private typealias Editor = SharedPreferences.Editor
 
 @PublishedApi
 internal val defaultJson = Json
