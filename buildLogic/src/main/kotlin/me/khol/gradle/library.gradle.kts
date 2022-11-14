@@ -1,5 +1,7 @@
 package me.khol.gradle
 
+import org.gradle.api.credentials.PasswordCredentials
+
 plugins {
     id("com.android.library")
     kotlin("android")
@@ -81,6 +83,12 @@ afterEvaluate {
                         developerConnection.set("scm:git:ssh://git@github.com/Antimonit/SharedPreferencesDelegates.git")
                     }
                 }
+            }
+        }
+        repositories {
+            maven {
+                setUrl("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
+                credentials(PasswordCredentials::class.java)
             }
         }
     }
