@@ -8,9 +8,7 @@ android {
 
 dependencies {
     implementation(project(":common"))
-}
 
-dependencies {
     testImplementation(libs.junit)
     testImplementation(libs.strikt)
     testImplementation(libs.robolectric)
