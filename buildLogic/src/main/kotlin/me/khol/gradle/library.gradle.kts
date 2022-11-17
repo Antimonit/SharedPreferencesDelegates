@@ -6,6 +6,7 @@ plugins {
     id("com.android.library")
     kotlin("android")
     id("maven-publish")
+    signing
     id("me.khol.gradle.jacoco.android")
 }
 
@@ -48,6 +49,13 @@ android {
             withJavadocJar()
         }
     }
+}
+
+signing {
+    // If [useInMemoryPgpKeys] is not used, PGP signing information will be read from a keyring.
+    // gpg --list-keys --keyid-format short
+    isRequired = true
+    sign(publishing.publications)
 }
 
 afterEvaluate {
