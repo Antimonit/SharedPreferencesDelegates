@@ -125,3 +125,18 @@ var generic: Generic<Composite>
 var nullableGeneric: Generic<Composite>?
     by preferences.typedObject("nullableGeneric", null)
 ```
+
+## Download
+
+The library is available from the MavenCentral repository:
+
+```kotlin
+// only basic types
+implementation("io.github.antimonit:spdelegates:1.0.0")
+
+// basic types + custom types using Moshi
+implementation("io.github.antimonit:spdelegates-moshi:1.0.0")
+// basic types + custom types using kotlinx.serialization
+implementation("io.github.antimonit:spdelegates-serialization:1.0.0")
+```
+ 
