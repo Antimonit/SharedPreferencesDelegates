@@ -1,4 +1,4 @@
-[![Maven Central](https://img.shields.io/maven-central/v/io.github.antimonit/shared-preferences-delegates.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22io.github.antimonit%22%20AND%20a:%22shared-preferences-delegates%22)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.antimonit/spdelegates.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22io.github.antimonit%22%20AND%20a:%22spdelegates%22)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![CircleCI](https://img.shields.io/circleci/build/gh/Antimonit/SharedPreferencesDelegates?label=CircleCI)](https://circleci.com/gh/Antimonit/SharedPreferencesDelegates)
 [![codecov](https://codecov.io/gh/Antimonit/SharedPreferencesDelegates/graph/badge.svg?token=ZK4VJZSPFI)](https://codecov.io/gh/Antimonit/SharedPreferencesDelegates)
