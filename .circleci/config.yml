@@ -14,15 +14,9 @@ jobs:
     steps:
       - checkout
       - run: ./gradlew check
-      - run: ./gradlew :core:testDebugUnitTestCoverage
-      - run: ./gradlew :moshi:testDebugUnitTestCoverage
-      - run: ./gradlew :serialization:testDebugUnitTestCoverage
+      - run: ./gradlew koverXmlReport
       - codecov/upload:
-          file: core/build/reports/jacoco/testDebugUnitTestCoverage/testDebugUnitTestCoverage.xml
-      - codecov/upload:
-          file: moshi/build/reports/jacoco/testDebugUnitTestCoverage/testDebugUnitTestCoverage.xml
-      - codecov/upload:
-          file: serialization/build/reports/jacoco/testDebugUnitTestCoverage/testDebugUnitTestCoverage.xml
+          file: build/reports/kover/report.xml
 
 workflows:
   test:
