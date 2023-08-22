@@ -7,7 +7,7 @@ plugins {
     kotlin("android")
     id("maven-publish")
     signing
-    id("me.khol.gradle.jacoco.android")
+    id("me.khol.gradle.kover.android")
 }
 
 val publicationRelease = "release"
