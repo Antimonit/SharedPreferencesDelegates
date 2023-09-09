@@ -1,6 +1,7 @@
 package me.khol.gradle
 
 import org.gradle.api.credentials.PasswordCredentials
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     id("com.android.library")
@@ -49,6 +50,13 @@ android {
         }
     }
 }
+
+tasks.withType<KotlinCompile>().configureEach {
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+}
+
 
 signing {
     // If [useInMemoryPgpKeys] is not used, PGP signing information will be read from a keyring.
