@@ -1,6 +1,5 @@
 package me.khol.gradle
 
-import org.gradle.api.credentials.PasswordCredentials
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -103,7 +102,11 @@ afterEvaluate {
         repositories {
             maven {
                 setUrl("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
-                credentials(PasswordCredentials::class.java)
+                credentials {
+                    // Stored as GitHub "Repository secrets", used by Github workflow
+                    username = System.getenv("MAVEN_USERNAME")
+                    password = System.getenv("MAVEN_PASSWORD")
+                }
             }
         }
     }
