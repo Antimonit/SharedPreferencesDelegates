@@ -132,11 +132,11 @@ The library is available from the MavenCentral repository:
 
 ```kotlin
 // only basic types
-implementation("io.github.antimonit:spdelegates:1.0.0")
+implementation("io.github.antimonit:spdelegates:1.0.1")
 
 // basic types + custom types using Moshi
-implementation("io.github.antimonit:spdelegates-moshi:1.0.0")
+implementation("io.github.antimonit:spdelegates-moshi:1.0.1")
 // basic types + custom types using kotlinx.serialization
-implementation("io.github.antimonit:spdelegates-serialization:1.0.0")
+implementation("io.github.antimonit:spdelegates-serialization:1.0.1")
 ```
  
