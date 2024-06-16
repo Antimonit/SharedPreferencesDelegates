@@ -4,12 +4,14 @@ plugins {
     id("org.jetbrains.kotlinx.kover")
 }
 
-koverReport {
-    filters {
-        excludes {
-            classes(
-                "*.BuildConfig",
-            )
+kover {
+    reports {
+        filters {
+            excludes {
+                classes(
+                    "*.BuildConfig",
+                )
+            }
         }
     }
 }
