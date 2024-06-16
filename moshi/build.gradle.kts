@@ -1,6 +1,6 @@
 plugins {
     id("me.khol.gradle.library")
-    kotlin("kapt")
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -12,7 +12,7 @@ dependencies {
     implementation(project(":common"))
 
     api(libs.moshi)
-    kaptTest(libs.moshi.codegen)
+    kspTest(libs.moshi.codegen)
 
     testImplementation(libs.junit)
     testImplementation(libs.strikt)
