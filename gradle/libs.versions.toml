@@ -1,6 +1,7 @@
 [versions]
 kotlin = "2.0.21"
 moshi = "1.15.1"
+maven-publish = "0.29.0"
 
 [libraries]
 junit = { module = "junit:junit", version = "4.13.2" }
@@ -17,7 +18,8 @@ plugin-android = { module = "com.android.tools.build:gradle", version = "8.7.1" 
 plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 plugin-kotlin-serialization = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
 plugin-kover = { module = "org.jetbrains.kotlinx:kover-gradle-plugin", version = "0.8.3" }
-plugin-maven-publish = { module = "com.vanniktech:gradle-maven-publish-plugin", version = "0.29.0" }
+plugin-maven-publish = { module = "com.vanniktech:gradle-maven-publish-plugin", version.ref = "maven-publish" }
 
 [plugins]
 ksp = { id = "com.google.devtools.ksp", version = "2.0.21-1.0.25" }
+maven-publish = { id = "com.vanniktech.maven.publish", version.ref = "maven-publish" }

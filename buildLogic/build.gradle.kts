@@ -7,4 +7,5 @@ dependencies {
     implementation(libs.plugin.kotlin)
     implementation(libs.plugin.kotlin.serialization)
     implementation(libs.plugin.kover)
+    implementation(libs.plugin.maven.publish)
 }
