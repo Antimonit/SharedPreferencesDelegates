@@ -16,7 +16,7 @@ jobs:
       - run: ./gradlew check
       - run: ./gradlew koverXmlReport
       - codecov/upload:
-          file: build/reports/kover/report.xml
+          files: build/reports/kover/report.xml
 
 workflows:
   test:
