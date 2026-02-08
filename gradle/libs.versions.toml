@@ -1,5 +1,5 @@
 [versions]
-kotlin = "2.0.21"
+kotlin = "2.3.10"
 moshi = "1.15.1"
 
 [libraries]
