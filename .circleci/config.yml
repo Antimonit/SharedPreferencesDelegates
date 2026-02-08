@@ -6,7 +6,7 @@ orbs:
 jobs:
   build:
     docker:
-      - image: cimg/android:2025.04
+      - image: cimg/android:2025.12
     working_directory: ~/repo/shared-preferences-delegates
     environment:
       JVM_OPTS: -Xmx3200m
