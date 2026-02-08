@@ -1,6 +1,6 @@
 [versions]
 kotlin = "2.3.10"
-moshi = "1.15.1"
+moshi = "1.15.2"
 
 [libraries]
 junit = { module = "junit:junit", version = "4.13.2" }
