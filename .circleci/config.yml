@@ -16,6 +16,8 @@ jobs:
       - checkout
       - run: ./gradlew check
       - run: ./gradlew koverXmlReport
+      - store_test_results:
+          path: .
       - codecov/upload:
           files: build/reports/kover/report.xml
 
