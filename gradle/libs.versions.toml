@@ -16,7 +16,7 @@ kotlinx-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-
 plugin-android = { module = "com.android.tools.build:gradle", version = "9.0.0" }
 plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 plugin-kotlin-serialization = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
-plugin-kover = { module = "org.jetbrains.kotlinx:kover-gradle-plugin", version = "0.9.6" }
+plugin-kover = { module = "org.jetbrains.kotlinx:kover-gradle-plugin", version = "0.9.7" }
 plugin-maven-publish = { module = "com.vanniktech:gradle-maven-publish-plugin", version = "0.36.0" }
 
 [plugins]
