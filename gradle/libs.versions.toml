@@ -20,4 +20,4 @@ plugin-kover = { module = "org.jetbrains.kotlinx:kover-gradle-plugin", version =
 plugin-maven-publish = { module = "com.vanniktech:gradle-maven-publish-plugin", version = "0.36.0" }
 
 [plugins]
-ksp = { id = "com.google.devtools.ksp", version = "2.3.5" }
+ksp = { id = "com.google.devtools.ksp", version = "2.3.6" }
